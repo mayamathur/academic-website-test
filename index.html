@@ -1,5 +1,4 @@
 ---
-layout: null
 permalink: /
 ---
 <!DOCTYPE html>
@@ -106,13 +105,50 @@ permalink: /
     margin-left: 4px;
   }
 
+  .hero-icons {
+    display: flex;
+    gap: 10px;
+    margin: 8px 0 28px;
+    flex-wrap: wrap;
+  }
+
+  .hero-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    transition: all 0.18s ease;
+  }
+
+  .hero-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .hero-icon:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--bg);
+    transform: translateY(-1px);
+  }
+
   .hero-role {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--ink-muted);
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     line-height: 1.7;
   }
 
@@ -563,10 +599,13 @@ permalink: /
     padding: 40px;
   }
 
-  .featured-visual.dag svg {
+  .featured-visual.dag svg,
+  .featured-visual.dag img {
     width: 100%;
     height: auto;
     max-height: 100%;
+    object-fit: contain;
+    display: block;
   }
 
   /* ===== FOOTER ===== */
@@ -645,6 +684,16 @@ permalink: /
 <section class="hero">
   <div class="hero-text fade-in">
     <h1 class="hero-title">Maya B. Mathur</h1>
+    <div class="hero-icons">
+      <a class="hero-icon" href="https://www.dropbox.com/scl/fi/4akg39cxorep5d005n1dr/Mathur-CV-for-website.pdf?rlkey=jw6yg4j0f5huht40q8r2jdevv&amp;dl=0" target="_blank" rel="noopener" title="Curriculum vitae (PDF)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="11" y2="9"/></svg>
+        <span>CV</span>
+      </a>
+      <a class="hero-icon" href="https://scholar.google.com/citations?user=vmuNN1sAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span>Scholar</span>
+      </a>
+    </div>
     <div class="hero-role">
       <span class="role-line"><strong>Associate Professor</strong></span>
       <span class="role-line">Biomedical Informatics &amp; Pediatrics</span>
@@ -654,7 +703,7 @@ permalink: /
     <div class="bio-wrap">
       <div class="bio serious" id="bioSerious">
         <p>
-          Maya Mathur is a statistician whose methodological research focuses on <strong>meta-analysis and other forms of evidence synthesis, missing data, selection bias, and causal inference (especially using graphical models).</strong>
+          Maya Mathur is a statistician whose methodological research focuses on meta-analysis and other forms of evidence synthesis, missing data, selection bias, and causal inference (especially using graphical models).
         </p>
         <p>
           Outside of methodological research, she directs the <a href="https://www.foodlabstanford.com/" target="_blank" rel="noopener">Stanford Humane and Sustainable Food Lab</a> and serves as Associate Director of Stanford Data Science's <a href="https://datascience.stanford.edu/cores" target="_blank" rel="noopener">Center for Open and Reproducible Science</a>. Her primary appointment is in the <a href="https://med.stanford.edu/qsu.html" target="_blank" rel="noopener">Quantitative Sciences Unit</a>.
@@ -669,7 +718,7 @@ permalink: /
           I like nonfiction and some novels. I like fiction that is dark, philosophical, ambiguous, and tightly written. Think <em>Never Let Me Go</em>, <em>I Who Have Never Known Men</em>, and Ted Chiang's short fiction. I host a nonfiction book club that has been described as "depressing."
         </p>
         <p>
-          I'm into dog sports, especially <strong>canicross</strong>: I run while my dog Sirius drags me on a bungee leash. It's all the fun of running fast with much less (human) athleticism. We're also learning other dog sports: agility, scent discrimination, and hunting wild morel mushrooms by scent.
+          I'm into dog sports, especially canicross: I run while my dog Sirius drags me on a bungee leash. It's all the fun of running fast with much less (human) athleticism. We're also learning other dog sports: agility, scent discrimination, and hunting wild morel mushrooms by scent.
         </p>
 
         <figure class="bio-fig">
@@ -705,14 +754,6 @@ permalink: /
     <div class="section-grid">
       <div class="section-label">Quick links</div>
       <div class="quicklinks">
-        <a class="quicklink" href="https://www.dropbox.com/scl/fi/4akg39cxorep5d005n1dr/Mathur-CV-for-website.pdf?rlkey=jw6yg4j0f5huht40q8r2jdevv&amp;dl=0" target="_blank" rel="noopener">
-          <span class="quicklink-title">Curriculum vitae</span>
-          <span class="quicklink-arrow">PDF ↗</span>
-        </a>
-        <a class="quicklink" href="https://scholar.google.com/citations?user=vmuNN1sAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-          <span class="quicklink-title">Google Scholar profile</span>
-          <span class="quicklink-arrow">Scholar ↗</span>
-        </a>
         <a class="quicklink" href="https://osf.io/e9tg8/" target="_blank" rel="noopener">
           <span class="quicklink-title">Open-science repositories</span>
           <span class="quicklink-arrow">OSF ↗</span>
@@ -867,46 +908,9 @@ permalink: /
       </a>
     </div>
 
-    <!-- Small DAG visual showing the common-cause structure -->
-    <div class="featured-visual dag" aria-hidden="true">
-      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
-          </marker>
-          <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b2c1f"/>
-          </marker>
-        </defs>
-
-        <!-- Common cause C at top -->
-        <circle cx="200" cy="55" r="24" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
-        <text x="200" y="62" text-anchor="middle" font-family="Fraunces, serif" font-size="20" font-style="italic" fill="#1a1a1a">C</text>
-
-        <!-- Treatment A bottom left -->
-        <circle cx="90" cy="215" r="24" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
-        <text x="90" y="222" text-anchor="middle" font-family="Fraunces, serif" font-size="20" font-style="italic" fill="#1a1a1a">A</text>
-
-        <!-- Outcome Y bottom right -->
-        <circle cx="310" cy="215" r="24" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
-        <text x="310" y="222" text-anchor="middle" font-family="Fraunces, serif" font-size="20" font-style="italic" fill="#1a1a1a">Y</text>
-
-        <!-- Selection node S in red (square) -->
-        <rect x="186" y="151" width="28" height="28" fill="none" stroke="#8b2c1f" stroke-width="1.5"/>
-        <text x="200" y="172" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-style="italic" fill="#8b2c1f">S</text>
-
-        <!-- C → A -->
-        <line x1="182" y1="73" x2="105" y2="197" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <!-- C → Y -->
-        <line x1="218" y1="73" x2="295" y2="197" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <!-- C → S -->
-        <line x1="200" y1="80" x2="200" y2="146" stroke="#8b2c1f" stroke-width="1.5" marker-end="url(#arrow-red)"/>
-        <!-- A → Y -->
-        <line x1="115" y1="215" x2="285" y2="215" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-        <!-- Caption -->
-        <text x="200" y="275" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#7a7a7a" letter-spacing="0.1em">COMMON-CAUSE STRUCTURE</text>
-      </svg>
+    <!-- DAG illustrating selection bias / missing data via common-cause structure -->
+    <div class="featured-visual dag">
+      <img src="/assets/images/dag_selection_bias.png" alt="DAG showing common-cause structure with variables A, V, R, Y">
     </div>
   </div>
 </section>

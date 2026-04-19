@@ -1,5 +1,4 @@
 ---
-layout: null
 permalink: /publications/
 ---
 <!DOCTYPE html>
@@ -396,6 +395,30 @@ permalink: /publications/
     font-variation-settings: "opsz" 36;
   }
 
+  .pub-citation-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+  }
+
+  .pub-citation-link:hover { color: var(--accent); }
+  .pub-citation-link:hover .pub-link-icon { opacity: 1; color: var(--accent); }
+
+  .pub-link-icon {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 7px;
+    opacity: 0.45;
+    color: var(--ink-muted);
+    transition: opacity 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .pub-citation-text { display: inline; }
+
   .pub-citation u {
     text-decoration: none;
     font-weight: 600;
@@ -622,7 +645,7 @@ permalink: /publications/
       <a href="/code/">Software</a>
     </nav>
   </div>
-  <h1 class="masthead-title">Publications<em>.</em></h1>
+  <h1 class="masthead-title">Publications</h1>
   <div class="masthead-sub">
     <div class="masthead-meta">
       <div><strong>Total</strong> <span id="total-count">—</span></div>
