@@ -1,0 +1,23 @@
+title: Maya B. Mathur
+description: Associate Professor at Stanford University
+url: "https://www.mayamathur.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from the site build
+exclude:
+  - README.md
+  - README_DEPLOY.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+
+# Settings so metabias_screenshot.png and related assets are served from /assets/images/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

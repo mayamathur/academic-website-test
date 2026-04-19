@@ -1,0 +1,110 @@
+# =============================================================
+# Maya B. Mathur — software registry
+# Edit this file to add/remove/update any software on the Software page.
+# =============================================================
+
+# Web-based interfaces and online tools
+web_tools:
+
+  - name: "metabias.io"
+    domain: "metabias.io"
+    url: "https://metabias.io"
+    description: "Sensitivity analyses for publication bias, <em>p</em>-hacking, unmeasured confounding, and their joint effects in meta-analyses. Point-and-click interface that produces publication-ready output."
+    credit: "Led by <strong>Mika Braginsky</strong>"
+    screenshot: "/assets/images/metabias_screenshot.png"
+
+  - name: "E-value calculator"
+    domain: "evalue-calculator.com"
+    url: "https://www.evalue-calculator.com/"
+    description: "Sensitivity analyses for unmeasured confounding in observational studies. Computes E-values and confidence-interval-based bounds for a range of effect measures."
+    credit: "With <strong>Ding</strong>, <strong>Smith</strong>, <strong>VanderWeele</strong>, <strong>Solymos</strong>, <strong>Lee</strong>"
+    # No screenshot — page falls back to SVG illustration
+
+  - name: "E-values for meta-analyses"
+    domain: "Online tool"
+    url: "https://mmathur.shinyapps.io/meta_gui_flex/"
+    description: "Sensitivity analyses for unmeasured confounding in meta-analyses. Complements the core E-value calculator with meta-analytic extensions."
+    credit: "With <strong>VanderWeele</strong>, <strong>Solymos</strong>"
+
+# R packages — order preserved here is the order shown on the page
+r_packages:
+
+  - name: "miapack"
+    description: "Multiple imputation for missing-not-at-random data with incomplete auxiliary variables. Implements the methods from Mathur, Seaman, Zhang, McGrath & Shpitser."
+    contributors: "McGrath, Mathur"
+    github: "https://github.com/stmcg/miapack"
+    # cran: not yet on CRAN
+
+  - name: "multibiasmeta"
+    description: "Corrections and sensitivity analyses for within-study and across-study biases in meta-analyses."
+    contributors: "Braginsky, Mathur"
+    cran: "https://cran.r-project.org/package=multibiasmeta"
+    github: "https://github.com/mathurlabstanford/multibiasmeta"
+
+  - name: "metabias"
+    description: "Common components — classes, methods, and documentation — for meta-analysis packages."
+    contributors: "Braginsky, Mathur"
+    cran: "https://cran.r-project.org/package=metabias"
+    github: "https://github.com/mathurlabstanford/metabias"
+
+  - name: "truncnormbayes"
+    description: "Bayesian estimation of the parameters of a truncated normal distribution."
+    contributors: "Braginsky, King, Mathur"
+    cran: "https://cran.r-project.org/package=truncnormbayes"
+    github: "https://github.com/mathurlabstanford/truncnormbayes"
+
+  - name: "phacking"
+    description: "Sensitivity analysis for p-hacking in meta-analyses."
+    contributors: "Braginsky, Mathur"
+    cran: "https://cran.r-project.org/package=phacking"
+    github: "https://github.com/mathurlabstanford/phacking"
+
+  - name: "regmedint"
+    description: "Regression-based causal mediation analysis."
+    contributors: "Yoshida, Li, Mathur"
+    cran: "https://cran.r-project.org/package=regmedint"
+    github: "https://github.com/kaz-yos/regmedint"
+
+  - name: "PublicationBias"
+    description: "Sensitivity analyses for publication bias in meta-analyses."
+    contributors: "Mathur, Wang, VanderWeele"
+    cran: "https://cran.r-project.org/package=PublicationBias"
+    github: "https://github.com/mayamathur/PublicationBias"
+
+  - name: "MetaUtility"
+    description: "Estimate the proportion of effects stronger than a threshold of scientific importance, effect-size conversions, and meta-analytic inference helpers."
+    contributors: "Mathur, VanderWeele"
+    cran: "https://cran.r-project.org/package=MetaUtility"
+    github: "https://github.com/mayamathur/MetaUtility"
+
+  - name: "NRejections"
+    description: "Metrics of outcome-wide evidence strength for studies testing multiple correlated outcomes."
+    contributors: "Mathur, VanderWeele"
+    cran: "https://cran.r-project.org/package=NRejections"
+    github: "https://github.com/mayamathur/NRejections"
+
+  - name: "EValue"
+    description: "Sensitivity analyses for unmeasured confounding or selection bias in observational studies and meta-analyses."
+    contributors: "Mathur, Ding, Smith, VanderWeele"
+    cran: "https://cran.r-project.org/package=EValue"
+    github: "https://github.com/mayamathur/EValue"
+
+  - name: "Replicate"
+    description: "Statistical analyses for multisite replication projects."
+    contributors: "Mathur, VanderWeele"
+    cran: "https://cran.r-project.org/package=Replicate"
+    github: "https://github.com/mayamathur/Replicate"
+
+  - name: "SimTimeVar"
+    description: "Simulate a longitudinal dataset with time-varying covariates with user-specified correlation structures across and within clusters."
+    contributors: "Mathur, Kapphahn, Garcia, Desai, Montez-Rath"
+    cran: "https://cran.r-project.org/package=SimTimeVar"
+    # github: not tracked
+
+# Stata modules
+stata_modules:
+
+  - name: "EVALUE"
+    description: "Sensitivity analyses for unmeasured confounding in observational studies."
+    contributors: "Linden, VanderWeele, Mathur"
+    url: "https://ideas.repec.org/c/boc/bocode/s458592.html"
